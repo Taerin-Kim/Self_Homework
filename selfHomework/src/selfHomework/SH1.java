@@ -17,13 +17,22 @@ public class SH1 {
 		int n = sc.nextInt();
 
 		// 랜덤함수 사용하기 Math.random()
-
 		Random rd = new Random();
-		int num = rd.nextInt();
 
+		int num = (int) (Math.random() * 100) + 1; //1~100 까지 랜덤 값
+		int game = 10;
+
+		// up & down Game
+		// 1. 랜덤적으로 뽑을 숫자!
+		// 2. 임의의 난수뽑는 random 클래스
+		// 3. 뽑힌 값과 user 입력한 값 비교!
+		// 4. user < 임의의 난수: 업
+		// 5. user > 임의의 난수: 다운
+		// 6. user == 임의의 난수: 맞았다!
 		
+		// 몇번 이내 맞출지~ 횟수! (10번으로 제한)
 		
-		for (int game=1 ; game<=10; game++) {
+		for (int game=10 ; game<=10; game--) {
 			if (num < n) {
 				System.out.println("UP!");
 			} else if (num > n) {
