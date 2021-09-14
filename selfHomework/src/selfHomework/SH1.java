@@ -14,13 +14,11 @@ public class SH1 {
 		System.out.println("업다운 게임을 시작합니다.(10번 안으로 맞춰주세요)");
 		System.out.println("숫자를 입력해주세요 (숫자는 1~100사이의 수입니다.)");
 
-		int n = sc.nextInt();
-
 		// 랜덤함수 사용하기 Math.random()
 		Random rd = new Random();
 
-		int num = (int) (Math.random() * 100) + 1; //1~100 까지 랜덤 값
-		int game = 10;
+		int target = (int) (Math.random() * 100) + 1; // 1~100 까지 랜덤 값
+		int MAX = 10;
 
 		// up & down Game
 		// 1. 랜덤적으로 뽑을 숫자!
@@ -29,20 +27,24 @@ public class SH1 {
 		// 4. user < 임의의 난수: 업
 		// 5. user > 임의의 난수: 다운
 		// 6. user == 임의의 난수: 맞았다!
-		
+
 		// 몇번 이내 맞출지~ 횟수! (10번으로 제한)
-		
-		for (int game=10 ; game<=10; game--) {
-			if (num < n) {
-				System.out.println("UP!");
-			} else if (num > n) {
+
+		for (int i = 0; i < MAX; i++) {
+			int n = sc.nextInt();
+			if (i == MAX - 1) {
+				System.out.printf("실패하였습니다. 정답은 %d입니다.\n", target);
+			} else if (target < n) {
 				System.out.println("DOWN!");
-			} else if (n == num) {
+			} else if (target > n) {
+				System.out.println("UP!");
+			} else if (n == target) {
 				System.out.println("정답입니다!");
+				break;
 			}
+
 		}
 		System.out.println("다시 게임을 하시려면 재시작을 눌러주세요!");
-
 	}
 
 }
