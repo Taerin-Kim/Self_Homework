@@ -28,7 +28,6 @@ public class fibo {
 	}
 
 	// 이 클래스 안에서만, 보이드는 리턴타입 (리턴하지 않을때 보이드 사용하고, 리턴할때 메인함수에 뭘 보내야할때는, int나 이런걸 사용)
-
 	private static void fibo1(int n) {
 		List<Integer> list = new ArrayList<Integer>(); // list 선언		
 		
