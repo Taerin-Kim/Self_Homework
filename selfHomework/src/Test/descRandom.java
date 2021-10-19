@@ -3,7 +3,7 @@ package Test;
 import java.util.Random;
 import java.util.Scanner;
 
-public class random {
+public class descRandom {
 	
 		public static void main(String[] args) {
 			// 난수 값 받고 랜덤 해주고, 중복값 제거해서 내림차순
